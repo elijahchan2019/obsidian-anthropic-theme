@@ -1,0 +1,6 @@
+.DS_Store
+Thumbs.db
+.git/
+
+# 🚨 Protect Copyright: Never commit proprietary Anthropic fonts to GitHub
+fonts/
