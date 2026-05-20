@@ -327,9 +327,6 @@ body.theme-dark {
 .inline-title {
   font-family: var(--font-heading-theme) !important;
 }
-.markdown-rendered h6 {
-  font-family: var(--font-text-theme) !important;
-}
 
 .markdown-rendered h1 {
   font-weight: 700;
@@ -367,6 +364,7 @@ body.theme-dark {
 }
 
 .markdown-rendered h6 {
+  font-family: var(--font-text-theme) !important;
   font-weight: 600;
   line-height: 1.4;   letter-spacing: 0.09em;
   text-transform: uppercase;
@@ -665,6 +663,7 @@ hr,
   appearance: none;
   -webkit-appearance: none;
   width: 18px; height: 18px;
+  min-width: 18px; min-height: 18px;
   border: 2px solid var(--background-modifier-border);
   border-radius: var(--radius-s);
   background: var(--background-modifier-form-field);
@@ -1084,16 +1083,16 @@ input[type='range']::-webkit-slider-thumb:hover {
 }
 .callout-title {
   font-family: var(--font-interface-theme);
-  font-weight: 600;
+  font-weight: 700;
   color: var(--text-normal);
 }
 
-.callout[data-callout='info']     { border-left-color: var(--callout-color-info);    background: rgba(106, 155, 204, 0.06); }
-.callout[data-callout='warning']  { border-left-color: var(--callout-color-warning); background: rgba(212, 162, 127, 0.06); }
+.callout[data-callout='info']     { border-left-color: var(--callout-color-info);    background: rgba(106, 155, 204, 0.06); color: #1a365d; }
+.callout[data-callout='warning']  { border-left-color: var(--callout-color-warning); background: rgba(212, 162, 127, 0.06); color: #7a4a23; }
 .callout[data-callout='error'],
-.callout[data-callout='danger']   { border-left-color: var(--callout-color-error);   background: rgba(196, 102, 134, 0.06); }
+.callout[data-callout='danger']   { border-left-color: var(--callout-color-error);   background: rgba(196, 102, 134, 0.06); color: #7a1a3a; }
 .callout[data-callout='success'],
-.callout[data-callout='tip']      { border-left-color: var(--callout-color-success); background: rgba(120, 140, 93, 0.06); }
+.callout[data-callout='tip']      { border-left-color: var(--callout-color-success); background: rgba(120, 140, 93, 0.06); color: #3d5a1a; }
 .callout[data-callout='question'] { border-left-color: var(--callout-color-clay);    background: rgba(217, 119, 87, 0.06); }
 .callout[data-callout='quote']    { border-left-color: var(--callout-color-slate);   background: rgba(94, 93, 89, 0.04); }
 .callout[data-callout='abstract'],
@@ -1600,7 +1599,7 @@ button:focus-visible .clickable-icon,
 /* ── 键盘导航增强 ─────────────────────────────────────────── */
 
 /* Tab 健全顺序优化 */
-.markdown-source-view mod-active {
+.markdown-source-view.is-focused {
   /* 确保源码模式下的模块获得焦点时有清晰指示 */
   box-shadow: 0 0 0 2px var(--interactive-accent);
 }
@@ -1649,29 +1648,11 @@ button:not(.clickable-icon) {
 }
 
 /* 复选框触摸区域：用 ::after 伪元素扩大点击范围（不影响布局） */
-.task-list-item-checkbox {
-  min-width: 18px;
-  min-height: 18px;
-  position: relative;
-}
 .task-list-item-checkbox::after {
   content: '';
   position: absolute;
   inset: -13px;
 }
-
-/* ── 颜色对比度增强 ──────────────────────────────────────────── */
-
-.callout-title {
-  font-weight: 700;
-}
-
-.callout[data-callout='info']     { color: #1a365d; }
-.callout[data-callout='warning']  { color: #7a4a23; }
-.callout[data-callout='error'],
-.callout[data-callout='danger']   { color: #7a1a3a; }
-.callout[data-callout='success'],
-.callout[data-callout='tip']      { color: #3d5a1a; }
 
 /* ── 模态框与对话框可访问性 ──────────────────────────────────── */
 
