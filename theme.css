@@ -1,66 +1,16 @@
 /* ============================================================
-   Anthropic — Obsidian Theme  v3.5.6
-   字体: Anthropic Sans · Anthropic Serif · Anthropic Mono
+   Anthropic Style — Obsidian Theme  v3.5.7
+   字体: Lora · Instrument Sans · JetBrains Mono
    色彩: Ivory #FAF9F5 · Slate #141413 · Clay #D97757
    ============================================================*/
 
-/* ── Anthropic 官方字体（本地 woff2，variable font weight 300–800） ── */
-
-@font-face {
-  font-family: 'Anthropic Sans';
-  src: url('fonts/AnthropicSans-Roman.woff2') format('woff2');
-  font-weight: 300 800;
-  font-style: normal;
-  font-display: optional;  /* 优先使用本地字体，避免闪烁 */
-}
-@font-face {
-  font-family: 'Anthropic Sans';
-  src: url('fonts/AnthropicSans-Italic.woff2') format('woff2');
-  font-weight: 300 800;
-  font-style: italic;
-  font-display: optional;  /* 优先使用本地字体，避免闪烁 */
-}
-
-@font-face {
-  font-family: 'Anthropic Serif';
-  src: url('fonts/AnthropicSerif-Roman.woff2') format('woff2');
-  font-weight: 300 800;
-  font-style: normal;
-  font-display: optional;  /* 优先使用本地字体，避免闪烁 */
-}
-@font-face {
-  font-family: 'Anthropic Serif';
-  src: url('fonts/AnthropicSerif-Italic.woff2') format('woff2');
-  font-weight: 300 800;
-  font-style: italic;
-  font-display: optional;  /* 优先使用本地字体，避免闪烁 */
-}
-
-@font-face {
-  font-family: 'Anthropic Mono';
-  src: url('fonts/AnthropicMono-Roman.woff2') format('woff2');
-  font-weight: 300 800;
-  font-style: normal;
-  font-display: optional;  /* 优先使用本地字体，避免闪烁 */
-}
-@font-face {
-  font-family: 'Anthropic Mono';
-  src: url('fonts/AnthropicMono-Italic.woff2') format('woff2');
-  font-weight: 300 800;
-  font-style: italic;
-  font-display: optional;  /* 优先使用本地字体，避免闪烁 */
-}
-
-/* ════════════════════════════════════════════════════════════
-   DESIGN TOKENS — 所有可调值集中在此，不在组件里硬写
-   ════════════════════════════════════════════════════════════ */
+/* ── 字体族（开源平替 + CJK 回退） ── */
 
 body {
-  /* ── 字体族（Anthropic 官方/本地导入优先 + 开源平替 + CJK 回退） ── */
-  --font-text-theme:       'Anthropic Serif', 'Lora', Georgia, "Source Han Sans SC", "Source Han Sans CN", "Noto Sans CJK SC", "思源黑体", "PingFang SC", "Microsoft YaHei", sans-serif;
-  --font-heading-theme:    'Anthropic Serif', 'Lora', Georgia, "GenRyuMin2 TW", "源流明體月", "GenRyuMin2 TC", "源流明體丹", "GenRyuMin2 JP", "源流明朝", "GenRyuMin", "源流明體", "Source Han Serif SC", "Source Han Serif CN", "Noto Serif CJK SC", "思源宋体", "Songti SC", "STSong", serif;
-  --font-monospace-theme:  'Anthropic Mono', 'JetBrains Mono', ui-monospace, monospace;
-  --font-interface-theme:  'Anthropic Sans', 'Instrument Sans', 'Inter', system-ui, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-text-theme:       'Lora', Georgia, "Source Han Sans SC", "Source Han Sans CN", "Noto Sans CJK SC", "思源黑体", "PingFang SC", "Microsoft YaHei", sans-serif;
+  --font-heading-theme:    'Lora', Georgia, "GenRyuMin2 TW", "源流明體月", "GenRyuMin2 TC", "源流明體丹", "GenRyuMin2 JP", "源流明朝", "GenRyuMin", "源流明體", "Source Han Serif SC", "Source Han Serif CN", "Noto Serif CJK SC", "思源宋体", "Songti SC", "STSong", serif;
+  --font-monospace-theme:  'JetBrains Mono', ui-monospace, monospace;
+  --font-interface-theme:  'Instrument Sans', 'Inter', system-ui, "Segoe UI", Roboto, Helvetica, Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
 
   /* ── 圆角（对齐 Obsidian 官方变量，不自造） ── */
   /* Obsidian 1.x 已内置 --radius-s/m/l/xl，此处仅确认值 */

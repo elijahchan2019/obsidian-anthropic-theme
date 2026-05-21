@@ -1,14 +1,13 @@
-# Anthropic
+# Anthropic Style
 
-A complete Obsidian theme reverse-engineered from [claude.ai](https://claude.ai) and the [Anthropic Design System](https://www.anthropic.com/brand).
+An elegant, warm, and highly readable Obsidian theme inspired by the classic editorial aesthetic of modern AI writing interfaces, featuring a carefully calibrated layout with beautiful typography, high-readability margins, and a comfortable warm ivory and clay palette.
+
+> [!IMPORTANT]
+> **Disclaimer**: This is an independent community project. It is not affiliated with, endorsed by, or associated with Anthropic or Claude.
 
 ## Why this exists
 
-Every day, thousands of people use Claude to think, write, and build. They spend hours inside claude.ai's interface — warm Ivory backgrounds, that distinctive Clay accent, the way Anthropic Serif makes long-form text feel settled and readable. Then they switch to their notes app, and the spell breaks.
-
-This theme closes that gap. It doesn't borrow a color or two from Anthropic's palette — it *is* the Anthropic design system, faithfully adapted to Obsidian's CSS architecture. Same fonts. Same color logic. Same attention to typographic detail that makes reading on claude.ai feel effortless.
-
-If you think in Claude, your notes should look the part.
+Many writers, researchers, and developers love the warm, literary look of modern publishing and AI web interfaces—characterized by soft Ivory backgrounds, subtle Clay accents, and a serif font stack that makes long-form reading effortless. This theme adapts those design philosophies to Obsidian's CSS architecture.
 
 ---
 
@@ -16,14 +15,14 @@ If you think in Claude, your notes should look the part.
 
 ### Typography
 
-Three Anthropic custom typefaces, bundled as variable-weight woff2 files (300–800), configured in a beautiful CJK-friendly layout:
+The theme leverages high-fidelity open-source typefaces configured in a beautiful, highly legible CJK-friendly layout:
 
 | Font | Role | Where you see it | CJK Fallback |
 |------|------|------------------|--------------|
-| **Anthropic Serif** | Headings (H1–H5) | Reading and Editing view headings, inline title | **Genryu Mincho (源流明朝)** → Noto Serif CJK SC |
-| **Anthropic Serif** | Body text | Reading view and Edit mode paragraphs, H6 | **Source Han Sans (思源黑体)** → PingFang SC |
-| **Anthropic Sans** | Interface | Sidebar, tabs, buttons, settings, status bar | **PingFang SC (苹方)** → Microsoft YaHei |
-| **Anthropic Mono** | Code | Code blocks, inline code, properties panel | System Monospace |
+| **Lora** / Georgia | Headings (H1–H5) | Reading and Editing view headings, inline title | **Genryu Mincho (源流明朝)** → Noto Serif CJK SC |
+| **Lora** / Georgia | Body text | Reading view and Edit mode paragraphs, H6 | **Source Han Sans (思源黑体)** → PingFang SC |
+| **Instrument Sans** / Inter | Interface | Sidebar, tabs, buttons, settings, status bar | **PingFang SC (苹方)** → Microsoft YaHei |
+| **JetBrains Mono** | Code | Code blocks, inline code, properties panel | System Monospace |
 
 *   **Classical Woodblock Headings**: CJK headings use the SIL open licensed **Genryu Mincho (源流明朝)** to capture the woodblock-carved stroke terminals and ink-bleed corners, providing stunning literary and vintage editorial design.
 *   **Highly Legible Prose**: CJK body text falls back to high-readability sans-serif fonts (**Source Han Sans / 思源黑体**) to ensure effortless screen reading for long-form content.
@@ -115,68 +114,7 @@ Fonts use `optional` display strategy — the browser uses system fonts on first
 - `will-change` hints only on actively animated properties
 - GPU compositing via `translateZ(0)` on scroll containers
 - `overscroll-behavior: contain` to prevent scroll chain
-- No network requests — all fonts bundled locally as woff2
 
----
-
-## File Structure
-
-```
-anthropic-obsidian-theme/
-├── manifest.json          # Theme metadata (name, version, minAppVersion)
-├── theme.css              # 1,450+ lines, single-file, zero dependencies
-├── screenshot.png         # 512×288 community store preview
-├── README.md              # This file
-├── LICENSE                # MIT
-└── fonts/
-    ├── AnthropicSans-Roman.woff2       (118 KB)
-    ├── AnthropicSans-Italic.woff2      (130 KB)
-    ├── AnthropicSerif-Roman.woff2      (175 KB)
-    ├── AnthropicSerif-Italic.woff2     (166 KB)
-    ├── AnthropicMono-Roman.woff2       (66 KB)
-    └── AnthropicMono-Italic.woff2      (70 KB)
-```
-
-Total package size: ~725 KB (fonts are ~624 KB, CSS is ~48 KB).
-
-## Typography & Font Copyright Notice
-
-To respect intellectual property rights and comply with the Obsidian Community Theme Guidelines, this repository **does not** bundle Anthropic's proprietary font files (`Anthropic Sans`, `Anthropic Serif`, `Anthropic Mono`). 
-
-### 🌟 Out-of-the-box Experience (Default)
-By default, the theme features a beautifully customized, highly-harmonious typography setup:
-* **Headings (H1–H5)**: `Lora` (Serif) for English, and the exquisite woodblock-style **Genryu Mincho (源流明朝)** / **Noto Serif CJK SC (思源宋体)** for CJK characters.
-* **Prose/Text**: `Lora` (warm-toned screen-friendly Serif) for English, and **Source Han Sans (思源黑体)** (highly-legible Sans-serif) for CJK text to ensure fatigue-free screen reading.
-* **UI/Interface**: `Instrument Sans` / `Inter` (Sans-serif).
-* **Code**: `JetBrains Mono` (Monospace).
-
-If these fonts are installed on your system or accessible, the theme renders them beautifully with no configuration required.
-
-### 🚀 How to Enable 100% Genuine Anthropic Look (Optional)
-If you have access to Anthropic's official `woff2` font files for personal use:
-1. Create a `fonts` folder inside your vault's theme directory: `.obsidian/themes/Anthropic/fonts/`
-2. Place the following 6 font files into that directory and name them exactly as shown:
-   * `AnthropicSans-Roman.woff2`
-   * `AnthropicSans-Italic.woff2`
-   * `AnthropicSerif-Roman.woff2`
-   * `AnthropicSerif-Italic.woff2`
-   * `AnthropicMono-Roman.woff2`
-   * `AnthropicMono-Italic.woff2`
-3. Restart Obsidian. The theme will seamlessly detect and apply the genuine fonts!
-
----
-
-## Installation
-
-### From Obsidian Community Themes
-
-Settings → Appearance → Themes → Manage → search "Anthropic" → Install
-
-### Manual
-
-1. Download the [latest release](https://github.com/elijahchan2019/obsidian-anthropic-theme/releases)
-2. Extract into your vault's `.obsidian/themes/Anthropic/` directory
-3. Settings → Appearance → Theme → select "Anthropic"
 
 ---
 
@@ -191,7 +129,7 @@ Settings → Appearance → Themes → Manage → search "Anthropic" → Install
 
 ## Acknowledgments
 
-This theme is a product of Vibe Coding — designed and built entirely through conversation with Claude. No line of CSS was written by human hand. The design system was reverse-engineered from claude.ai's live interface and the public Anthropic brand guidelines.
+This theme is designed and built entirely through pair-programming conversation with AI. It is an independent homage to beautiful, editorial web interfaces.
 
 ---
 
