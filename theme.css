@@ -1,5 +1,5 @@
 /* ============================================================
-   Anthropic — Obsidian Theme  v3.5.8
+   Folio — Obsidian Theme  v1.0.0
    字体: Lora · Instrument Sans · JetBrains Mono
    色彩: Ivory #FAF9F5 · Slate #141413 · Clay #D97757
    ============================================================*/
@@ -33,7 +33,7 @@ body {
   --h5-size: 0.9em;
   --h6-size: 0.8em;
 
-  /* ── Callout 颜色（Anthropic 官方 swatch，模式无关） ── */
+  /* ── Callout 颜色（典雅书卷色板，模式无关） ── */
   --callout-color-info:     #6A9BCC;   /* Sky */
   --callout-color-warning:  #D4A27F;   /* Kraft */
   --callout-color-error:    #C46686;   /* Fig */
@@ -42,7 +42,7 @@ body {
   --callout-color-slate:    #5E5D59;   /* Slate Light */
   --callout-color-heather:  #827DBD;   /* Heather */
 
-  /* ── 辅助文字层级（Anthropic 官方色板：Slate 系列） ── */
+  /* ── 辅助文字层级（页岩灰色系） ── */
   --slate-light:  #B0AEA5;   /* Slate Light — 次要文字、图标 */
   --slate-faint:  #87867F;   /* 更淡文字 */
 
@@ -151,7 +151,7 @@ body.theme-light {
   --shadow-large:    0 8px 24px rgba(20, 20, 19, 0.10);
   --shadow-modal:    0 16px 48px rgba(20, 20, 19, 0.12), 0 4px 16px rgba(20, 20, 19, 0.08);
 
-  /* 语法高亮色板 (Anthropic 暖学术风格) */
+  /* 语法高亮色板 (暖调书卷风格) */
   --code-keyword:   #C6613F;  /* Clay 深色变体 - 关键字 */
   --code-string:    #5A7A3A;  /* Olive 深色 - 字符串 */
   --code-number:    #A63D2F;  /* Fig 深色 - 数字 */
@@ -249,7 +249,7 @@ body.theme-dark {
   --shadow-large:    0 8px 24px rgba(0, 0, 0, 0.25);
   --shadow-modal:    0 16px 48px rgba(0, 0, 0, 0.30), 0 4px 16px rgba(0, 0, 0, 0.20);
 
-  /* 语法高亮色板 (Anthropic 暖学术风格) */
+  /* 语法高亮色板 (暖调书卷风格) */
   --code-keyword:   #E8916A;  /* Accent 浅色变体 - 关键字 */
   --code-string:    #7AAF5A;  /* Olive 浅色 - 字符串 */
   --code-number:    #E07060;  /* Fig 浅色 - 数字 */
@@ -266,7 +266,7 @@ body.theme-dark {
    TYPOGRAPHY
    ════════════════════════════════════════════════════════════ */
 
-/* ── 标题（全部 Inter Sans，实测 Anthropic 内容页 H1-H4 均为 Sans） ── */
+/* ── 标题排版设计（高度契合典雅社论风格的衬线标题） ── */
 
 /* 基础 font-family，一次性声明 */
 .markdown-rendered h1,
@@ -354,15 +354,15 @@ body.theme-dark {
   font-weight: 600; text-transform: uppercase; letter-spacing: 0.09em;
 }
 
-/* ── 正文（Anthropic Serif，排除 codeblock 和 heading 行） ── */
+/* ── 正文排版设计（排除 codeblock 和 heading 行） ── */
 
 .cm-line:not(.HyperMD-codeblock):not(.HyperMD-header),
 .markdown-rendered p,
 .markdown-rendered li,
 .markdown-rendered dd {
   font-family: var(--font-text-theme);
-  line-height: 1.55;  /* Anthropic 实测：26.35px / 17px = 1.55 */
-  font-size: 1.0625em; /* 17px（Anthropic 正文字号，16px * 1.0625 = 17px） */
+  line-height: 1.55;  /* 精确黄金行高：26.35px / 17px = 1.55 */
+  font-size: 1.0625em; /* 17px (精细化社论字号，16px * 1.0625 = 17px) */
 }
 
 .markdown-rendered p {
@@ -379,8 +379,7 @@ body.theme-dark {
 /* ── 链接（仅内容区，不干扰侧边栏等 UI 链接） ── */
 
 /* 链接颜色说明：Obsidian 内链用 Clay 色（符合产品习惯）
-   Anthropic 官网链接用 Slate Dark `#141413`，这是 intentional UX 偏离
-   Clay 色在 Obsidian 中提供更好的视觉导航，适合知识图谱的双向链接特性 */
+   在 Obsidian 中提供更好的视觉导航，适合知识图谱的双向链接特性 */
 .markdown-rendered a,
 .cm-link .cm-url,
 .internal-link,
@@ -816,7 +815,7 @@ hr,
 ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb-bg); border-radius: var(--radius-s); }
 ::-webkit-scrollbar-thumb:hover { background: var(--scrollbar-active-thumb-bg); }
 
-/* ── 按钮（Anthropic 4种按钮类型） ── */
+/* ── 按钮（4种核心按钮类型） ── */
 
 /* Primary 按钮：Slate Dark 背景 */
 button.mod-cta,
@@ -1050,7 +1049,7 @@ input[type='range']::-webkit-slider-thumb:hover {
 .callout[data-callout='example']  { border-left-color: var(--callout-color-clay); }
 
 /* ── 表格 ──────────────────────────────────────────────────────
-   Anthropic 官网增强版（v3.2.1 更新）：
+   社论增强版风格（精细排版）：
    · 增加外边框 + 8px 圆角，定义表格边界
    · 表头统一浅灰背景（无斑马交替），通过字重 + 边框区分
    · 完整边框系统（行底线 + 列竖线）

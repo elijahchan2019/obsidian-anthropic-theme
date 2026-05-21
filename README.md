@@ -1,13 +1,10 @@
-# Anthropic Style
+# Folio
 
-An elegant, warm, and highly readable Obsidian theme inspired by the classic editorial aesthetic of modern AI writing interfaces, featuring a carefully calibrated layout with beautiful typography, high-readability margins, and a comfortable warm ivory and clay palette.
-
-> [!IMPORTANT]
-> **Disclaimer**: This is an independent community project. It is not affiliated with, endorsed by, or associated with Anthropic or Claude.
+An elegant, warm, and highly readable Obsidian theme inspired by beautiful editorial design and modern literary publishing aesthetics, featuring a carefully calibrated layout with beautiful typography, high-readability margins, and a comfortable warm ivory and clay palette.
 
 ## Why this exists
 
-Many writers, researchers, and developers love the warm, literary look of modern publishing and AI web interfaces—characterized by soft Ivory backgrounds, subtle Clay accents, and a serif font stack that makes long-form reading effortless. This theme adapts those design philosophies to Obsidian's CSS architecture.
+Many writers, researchers, and developers love the warm, literary look of modern publishing—characterized by soft Ivory backgrounds, subtle Clay accents, and a serif font stack that makes long-form reading effortless. This theme adapts those design philosophies to Obsidian's CSS architecture.
 
 ---
 
@@ -98,7 +95,7 @@ body {
 font-display: optional;
 ```
 
-Fonts use `optional` display strategy — the browser uses system fonts on first paint and swaps to Anthropic fonts on next navigation. This eliminates FOIT (Flash of Invisible Text) entirely while maintaining the Anthropic visual identity for returning users.
+Fonts use `optional` display strategy — the browser uses system fonts on first paint and swaps to custom fonts on next navigation. This eliminates FOIT (Flash of Invisible Text) entirely while maintaining the theme's visual identity for returning users.
 
 ### Accessibility
 
