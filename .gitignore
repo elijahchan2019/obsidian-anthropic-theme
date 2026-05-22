@@ -2,5 +2,5 @@
 Thumbs.db
 .git/
 
-# 🚨 Protect Copyright: Never commit proprietary Anthropic fonts to GitHub
+# Keep private bundled fonts out of the public theme repository
 fonts/
