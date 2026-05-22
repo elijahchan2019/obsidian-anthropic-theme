@@ -116,9 +116,21 @@ body.theme-light {
   --icon-color-active: #D97757;
   --icon-color-focused:#D97757;
 
-  /* 标签页 */
+  /* 标签页（官方变量，由 Obsidian 内部 CSS 读取并渲染） */
   --tab-text-color-focused-active:         #141413;
   --tab-text-color-focused-active-current: #D97757;
+  --tab-background-active: var(--background-primary);
+  --tab-outline-color:     var(--background-modifier-border);
+  --tab-outline-width:     1px;
+
+  /* 滑块（官方变量） */
+  --slider-track-background:  #D4D2C9;
+  --slider-track-height:      4px;
+  --slider-thumb-border-color: var(--background-primary);
+  --slider-thumb-border-width: 2px;
+  --slider-thumb-height:      16px;
+  --slider-thumb-width:       16px;
+  --slider-thumb-radius:      50%;
 
   /* 标签 */
   --tag-background:       #D97757;
@@ -220,6 +232,18 @@ body.theme-dark {
 
   --tab-text-color-focused-active:         rgba(250, 249, 245, 0.85);
   --tab-text-color-focused-active-current: #D97757;
+  --tab-background-active: var(--background-primary);
+  --tab-outline-color:     var(--background-modifier-border);
+  --tab-outline-width:     1px;
+
+  /* 滑块（官方变量） */
+  --slider-track-background:  #333331;
+  --slider-track-height:      4px;
+  --slider-thumb-border-color: var(--background-primary);
+  --slider-thumb-border-width: 2px;
+  --slider-thumb-height:      16px;
+  --slider-thumb-width:       16px;
+  --slider-thumb-radius:      50%;
 
   --tag-background:       #D97757;
   --tag-background-hover: #E8916A;
@@ -594,6 +618,19 @@ hr,
   letter-spacing: 0.01em;
   line-height: 1.4;
 }
+
+/* 渲染模式下 tag 是 <a> 元素，.markdown-rendered a 的 color 会覆盖 .tag 的 color
+   导致文字色(Clay)与背景色(Clay)相同而不可见。此处用更高特异性强制修正。
+   同时覆盖表格、列表等嵌套上下文中的颜色继承。 */
+.markdown-rendered a.tag,
+.markdown-rendered td a.tag,
+.markdown-rendered th a.tag,
+.markdown-rendered li a.tag,
+.markdown-rendered blockquote a.tag,
+a.tag {
+  color: var(--tag-color) !important;
+}
+
 .tag:hover { background: var(--tag-background-hover); }
 
 /* Live Preview：# 和名字分两段，拼成完整药丸 */
@@ -655,11 +692,9 @@ hr,
 }
 .titlebar-button-container:hover { opacity: 1; }
 
-/* ── 标签页 ── */
+/* ── 标签页（样式由 body 中的官方变量控制，此处仅设字体） ── */
 
 .workspace-tab-header {
-  border-radius: var(--radius-m) var(--radius-m) 0 0;
-  transition: background var(--anim-fast);
   font-family: var(--font-interface-theme);
   font-size: 0.85em;
 }
@@ -668,9 +703,6 @@ hr,
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-size: 0.76em;
-}
-.workspace-tab-header.is-active {
-  background: var(--background-primary);
 }
 
 /* ── 侧边栏 ── */
@@ -970,23 +1002,9 @@ textarea:focus {
   border-color: var(--interactive-accent);
 }
 
-/* ── Slider 滑块 ── */
+/* ── Slider 滑块（尺寸/颜色由 body 中的官方变量控制，此处仅设交互效果） ── */
 
-input[type='range'] {
-  -webkit-appearance: none; appearance: none;
-  height: 4px;
-  background: var(--background-primary-alt);
-  border-radius: 2px;
-  outline: none;
-}
 input[type='range']::-webkit-slider-thumb {
-  -webkit-appearance: none; appearance: none;
-  width: 16px; height: 16px;
-  background: var(--interactive-accent);
-  border-radius: var(--radius-pill);
-  cursor: pointer;
-  border: 2px solid var(--background-primary);
-  box-shadow: var(--shadow-subtle);
   transition: transform var(--anim-fast), box-shadow var(--anim-fast);
 }
 input[type='range']::-webkit-slider-thumb:hover {
