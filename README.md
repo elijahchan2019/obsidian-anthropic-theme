@@ -117,7 +117,7 @@ Fonts use `optional` display strategy — the browser uses system fonts on first
 
 ## Compatibility
 
-- **Obsidian**: 1.4.0+
+- **Obsidian**: 1.5.0+
 - **Desktop**: Full support (macOS, Windows, Linux)
 - **Mobile**: Supported — CJK fallbacks handle system font differences
 - **Plugins**: Compatible with Style Settings for additional customization
